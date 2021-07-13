@@ -30,19 +30,20 @@ app.get("/", function(req, res) {
             }
             ds.each(function(i, e) {
                     obj.global.push({
-                        "Country": $(this).find("td:nth-child(1)").text(),
-                        "TotalCase": $(this).find("td:nth-child(2)").text(),
-                        "NewCase": $(this).find("td:nth-child(3)").text(),
-                        "TotalDeath": $(this).find("td:nth-child(4)").text(),
-                        "NewDeath": $(this).find("td:nth-child(5)").text(),
-                        "TotalRecovery": $(this).find("td:nth-child(6)").text(),
-                        "Infected": $(this).find("td:nth-child(7)").text(),
-                        "Critical": $(this).find("td:nth-child(8)").text(),
-                        "InfectionRate": $(this).find("td:nth-child(9)").text(),
-                        "DeathRate": $(this).find("td:nth-child(10)").text(),
-                        "Tested": $(this).find("td:nth-child(11)").text(),
-                        "Tested rate": $(this).find("td:nth-child(12)").text(),
-                        "Area": $(this).find("td:nth-child(13)").text(),
+                        "CountryId": $(this).find("td:nth-child(1)").text(),
+                        "CountryName": $(this).find("td:nth-child(2)").text(),
+                        "TotalCase": $(this).find("td:nth-child(3)").text(),
+                        "NewCase": $(this).find("td:nth-child(4)").text(),
+                        "TotalDeath": $(this).find("td:nth-child(5)").text(),
+                        "NewDeath": $(this).find("td:nth-child(6)").text(),
+                        "TotalRecovery": $(this).find("td:nth-child(7)").text(),
+                        "Infected": $(this).find("td:nth-child(8)").text(),
+                        "Critical": $(this).find("td:nth-child(9)").text(),
+                        "InfectionRate": $(this).find("td:nth-child(10)").text(),
+                        "DeathRate": $(this).find("td:nth-child(11)").text(),
+                        "Tested": $(this).find("td:nth-child(12)").text(),
+                        "Tested rate": $(this).find("td:nth-child(13)").text(),
+                        "Area": $(this).find("td:nth-child(14)").text(),
                     })
                 })
                 // cron.schedule("* * * * *", function() {
