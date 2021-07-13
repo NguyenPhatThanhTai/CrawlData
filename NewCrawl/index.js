@@ -2,7 +2,7 @@ var express = require("express");
 var fs = require('fs');
 var app = express();
 var path = require('path');
-app.use(express.static("public"));
+app.use(express.static("public"), cors({ origin: '*' }));
 app.set("view engine", "ejs");
 app.set("views", "./views")
 app.listen(process.env.PORT || 3000);
