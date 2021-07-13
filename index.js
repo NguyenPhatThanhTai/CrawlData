@@ -2,7 +2,13 @@ var express = require("express");
 var fs = require('fs');
 var app = express();
 var path = require('path');
-app.use(express.static("public"), cors({ origin: '*' }));
+// app.use(express.static("public"));
+app.use(function(req, res, next) {
+    express.static("public");
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 app.set("view engine", "ejs");
 app.set("views", "./views")
 app.listen(process.env.PORT || 3000);
